@@ -24,7 +24,12 @@ const Cuisine = () => {
 	////////
 	/////////
 	return (
-		<Grid>
+		<Grid
+			animate={{ opacity: 1 }}
+			initial={{ opacitiy: 0 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
 			{cuisine.map((item) => {
 				return (
 					<CardGrid key={item.id}>
